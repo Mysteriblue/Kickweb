@@ -1,35 +1,34 @@
 .square {
-  height: 600px;
-  width: 500px;
+  height: calc(1.5* 700px);
+  width: calc(1.5*500px);
   background-color:rgb(21, 54, 124); 
   position: relative;
   top: 50%;
   bottom: 50%;
-  
 }
 .square1 {
-  height: 200px;
-  width: 500px;
+  height: calc(1.5*300px);
+  width: calc(1.5*500px);
   background: rgb(53, 151, 114);
   position: absolute;
-  top: 60%;
-  bottom: 50%
+  top: 80%;
+  bottom: 50%;
   
 }
 .circle {
-  height: 300px;
-  width: 300px;
+  height: calc(1.5*300px);
+  width: calc(1.5*300px);
   border: 5px solid white;
   border-radius: 50%;
   position: absolute;
-  margin-left: 100px;
-  top: 35%;
+  margin-left: 140px;
+  top: 45%;
   bottom: 50%;
 
 }
 .Titel {
     font-family: 'Roboto';
-    font-size: 40px;
+    font-size: calc(1.5*40px);
     color: white;
     display: inline-block;
     white-space: nowrap;
@@ -38,7 +37,7 @@
     margin-left: 15px;
     top: 15%;
     bottom: 50%;
-    word-spacing: 30px;
+    word-spacing: 50px;
   }
   img {
     height: 25%;
