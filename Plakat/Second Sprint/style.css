@@ -5,7 +5,18 @@
   position: relative;
   top: 50%;
   bottom: 50%;
+  animation-name: lightSpeedInLeft;
+  transition-timing-function: ease-out;
+  animation-duration: 4s;
 }
+
+@keyframes lightSpeedInLeft {
+  from {transform: translate3d(-100%, 0, 0) skewX(30deg);opacity: 0;}
+  60% {transform: skewX(-20deg);opacity: 1;}
+  80% {transform: skewX(5deg);}
+  to {transform: translate3d(0, 0, 0);}
+}
+
 .square1 {
   height: calc(1.5*300px);
   width: calc(1.5*500px);
@@ -13,8 +24,18 @@
   position: absolute;
   top: 80%;
   bottom: 50%;
-  
+  animation-name: lightSpeedInRight;
+  animation-duration: 4s;
+  transition-timing-function: ease-out;
 }
+  
+@keyframes lightSpeedInRight {
+  from {transform: translate3d(100%, 0, 0) skewX(-30deg);opacity: 0;}
+  60% {transform: skewX(20deg);opacity: 1;}
+  80% {transform: skewX(-5deg);}
+  to {transform: translate3d(0, 0, 0);}
+}
+
 .circle {
   height: calc(1.5*300px);
   width: calc(1.5*300px);
@@ -24,14 +45,18 @@
   margin-left: 140px;
   top: 45%;
   bottom: 50%;
-  animation-name: kreis;
+  animation-name: bounce;
   animation-duration: 4s;
 
 }
 
-@keyframes kreis {
-  from {background-color: red;}
-  to {background-color: yellow;}
+@keyframes bounce {
+  from,20%,53%,
+  to {animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);transform: translate3d(0, 0, 0);}
+  40%,43% {animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);transform: translate3d(0, -30px, 0) scaleY(1.1);}
+  70% {animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);transform: translate3d(0, -15px, 0) scaleY(1.05);}
+  80% {transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);transform: translate3d(0, 0, 0) scaleY(0.95);}
+  90% {transform: translate3d(0, -4px, 0) scaleY(1.02);}
 }
 
 .Titel {
@@ -46,7 +71,16 @@
     top: 15%;
     bottom: 50%;
     word-spacing: 50px;
+    animation-name: text;
+    animation-duration: 2s;
+    transition-timing-function: ease-in;
   }
+
+  @keyframes text {
+    from {left: -500px;}
+    to {left: 0px;}
+  }
+
   img {
     height: 25%;
     width: 25%;
