@@ -1,0 +1,54 @@
+div.container {
+  display: flex;
+}
+.square {
+  height: calc(1.5* 700px);
+  width: calc(1.5*500px);
+  background-color:rgb(21, 54, 124); 
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+}
+.square1 {
+  height: calc(1.5*300px);
+  width: calc(1.5*500px);
+  background: rgb(53, 151, 114);
+  position: absolute;
+  top: 80%;
+  bottom: 50%;
+  
+}
+.circle {
+  height: calc(1.5*300px);
+  width: calc(1.5*300px);
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 140px;
+  top: 45%;
+  bottom: 50%;
+
+}
+.Titel {
+    font-family: 'Roboto';
+    font-size: calc(1.5*40px);
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    letter-spacing: 0.25px;
+    margin-left: 15px;
+    top: 15%;
+    bottom: 50%;
+    word-spacing: 50px;
+  }
+  img {
+    height: 25%;
+    width: 25%;
+    float: right;
+  }
+  @media screen and(max-width: 600px){
+    div.container {
+      transform: rotate(90deg);
+    }
+  }
