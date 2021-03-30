@@ -1,5 +1,6 @@
 div.container {
   display: flex;
+  flex-direction: column;
 }
 .square {
   height: calc(1.5* 700px);
@@ -47,8 +48,11 @@ div.container {
     width: 25%;
     float: right;
   }
-  @media screen and(max-width: 600px){
+  @media screen and (max-width: 600px){
     div.container {
       transform: rotate(90deg);
     }
+  }
+  @media screen and (min-width: 768px){
+  
   }
