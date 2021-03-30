@@ -7,14 +7,13 @@
   bottom: 50%;
   animation-name: lightSpeedInLeft;
   transition-timing-function: ease-out;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
-
 @keyframes lightSpeedInLeft {
-  from {transform: translate3d(-100%, 0, 0) skewX(30deg);opacity: 0;}
+  from {background-color:rgb(255, 255, 255); transform: translate3d(-100%, 0, 0) skewX(30deg);opacity: 0;}
   60% {transform: skewX(-20deg);opacity: 1;}
   80% {transform: skewX(5deg);}
-  to {transform: translate3d(0, 0, 0);}
+  to {background-color:rgb(21, 54, 124); transform: translate3d(0, 0, 0);}
 }
 
 .square1 {
@@ -25,15 +24,15 @@
   top: 80%;
   bottom: 50%;
   animation-name: lightSpeedInRight;
-  animation-duration: 4s;
+  animation-duration: 2s;
   transition-timing-function: ease-out;
 }
   
 @keyframes lightSpeedInRight {
-  from {transform: translate3d(100%, 0, 0) skewX(-30deg);opacity: 0;}
+  from {background-color:rgb(254, 254, 255);  transform: translate3d(100%, 0, 0) skewX(-30deg);opacity: 0;}
   60% {transform: skewX(20deg);opacity: 1;}
   80% {transform: skewX(-5deg);}
-  to {transform: translate3d(0, 0, 0);}
+  to {background-color:rgb(53, 151, 114);  transform: translate3d(0, 0, 0);}
 }
 
 .circle {
@@ -46,17 +45,20 @@
   top: 45%;
   bottom: 50%;
   animation-name: bounce;
-  animation-duration: 4s;
-
+  animation-duration: 1.5s;
+}
+.circle:hover {
+  background-color: seashell;
 }
 
 @keyframes bounce {
-  from,20%,53%,
-  to {animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);transform: translate3d(0, 0, 0);}
+  from {top: -100%;}
+  20% {background:rgb(252, 253, 255);}
   40%,43% {animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);transform: translate3d(0, -30px, 0) scaleY(1.1);}
-  70% {animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);transform: translate3d(0, -15px, 0) scaleY(1.05);}
-  80% {transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);transform: translate3d(0, 0, 0) scaleY(0.95);}
-  90% {transform: translate3d(0, -4px, 0) scaleY(1.02);}
+  80% {animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);transform: translate3d(0, -15px, 0) scaleY(1.05);}
+  85% {transition-timing-function: cubic-bezier(0.515, 0.61, 0.355, 1);transform: translate3d(0, 0, 0) scaleY(0.95);}
+  90% {background:rgb(21, 54, 124) translate3d(0, -8px, 0) scaleY(1.02);}
+  to {animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);transform: translate3d(0, 0, 0);}
 }
 
 .Titel {
@@ -75,6 +77,11 @@
     animation-duration: 2s;
     transition-timing-function: ease-in;
   }
+.Titel:hover {
+  transform: scale(0.8); rotate: 90deg;
+  height: 500px;
+  left: 200px;
+}
 
   @keyframes text {
     from {left: -500px;}
