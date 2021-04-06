@@ -1,7 +1,6 @@
 body {
     background-color: turquoise;
 }
-$amount: 5;
 
 .hex-grid_list {
     --amount: 5;
