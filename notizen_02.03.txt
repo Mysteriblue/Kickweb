@@ -1,7 +1,0 @@
-meta charset -> andere sprachen wie chinesisch
-initial scale -> wie gross es ist
-
-padding in css ist der abstand
-
-
-html: link zur google fonts, sodass ich nicht den font herunterladen muss 
